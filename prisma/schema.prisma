@@ -1,0 +1,125 @@
+// prisma/schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  // uncomment next line if you use Prisma <5.10
+  // directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Account {
+  id                Int     @id @default(autoincrement())
+  userId            Int     @map("user_id")
+  type              String
+  provider          String
+  providerAccountId String  @map("provider_account_id")
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  name          String?
+  email         String?   @unique
+  password      String?
+  emailVerified DateTime? @map("email_verified")
+  image         String?
+  accounts      Account[]
+
+  @@map("users")
+}
+
+enum ProjectNature {
+  Work
+  Play
+  Featured
+}
+
+enum ProjectCategory {
+  WEBSITE_DESIGN
+  WEBSITE_DEVELOPMENT
+  SOFTWARE_DEVELOPMENT
+  ECOMMERCE_STORE
+  MOBILE_APP
+  RESEARCH_AND_DEVELOPMENT
+  PRODUCT_DESIGN
+  IT_INFRASTRUCTURE
+}
+
+model Project {
+  id            Int             @id @default(autoincrement())
+  rating        Int             @default(0)
+  homeProject   Boolean         @default(true)
+  title         String
+  description   String
+  url           String
+  repoUrl       String?
+  coverImage    String?
+  coverImageBg  String?
+  slug          String          @default("")
+  // # Relationships
+  technologies  String[]
+  category      ProjectCategory @default(WEBSITE_DEVELOPMENT)
+  services      String[]
+  projectNature ProjectNature   @default(Featured)
+  client        String
+  clientId      String?
+  isActive      Boolean         @default(true)
+
+  // # Timeline
+  startDate DateTime?
+  endDate   DateTime?
+
+  // # Budget and estimation
+  budget         Int?
+  estimatedHours Int?
+
+  // # Optional fields
+  internalNotes   String?
+  clientFeedback  String?
+  status          String   @default("IN_PROGRESS")
+  imageGallery    String[]
+  content         String?
+  projectUniqueId String   @unique @default("00000000-0000-0000-0000-000000000000")
+
+  caseStudy CaseStudy?
+
+  @@map("projects")
+}
+
+model CaseStudy {
+  id           Int      @id @default(autoincrement())
+  title        String
+  description  String
+  tagline      String?
+  showreel     String?
+  projectId    String   @unique // This is the relation field
+  project      Project  @relation(fields: [projectId], references: [projectUniqueId])
+  colorPalette String[]
+  mockups      String[]
+  videos       String[]
+
+  @@map("caseStudy")
+}
+
+model ClientQuery {
+  id    Int    @id @default(autoincrement())
+  name  String
+  email String @unique
+  query String
+
+  @@map("clientquery")
+}
