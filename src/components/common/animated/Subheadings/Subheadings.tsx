@@ -11,6 +11,19 @@ type Props = {
   className?: string;
 };
 
+// Utility function to split text by <br /> and wrap each part in a <div>
+const splitTextByBr = (text: string) => {
+  return text.split("<br />").map((part, index) => {
+    console.log(part);
+
+    return (
+      <div key={index} className="overflow-hidden block">
+        {part}
+      </div>
+    );
+  });
+};
+
 const AnimatedSubheading = (props: Props) => {
   const headingRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
@@ -47,7 +60,9 @@ const AnimatedSubheading = (props: Props) => {
 
   return (
     <div ref={headingRef} className={`${props.className}`}>
-      {props.children}
+      {typeof props.children === "string"
+        ? splitTextByBr(props.children as string)
+        : props.children}
     </div>
   );
 };

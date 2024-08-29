@@ -13,7 +13,7 @@ const Experience = (props: Props) => {
             <div className="">
               <AnimatedSubheading>
                 <h2 className="common-pagesubheading text-left font-fancy overflow-hidden leading-normal">
-                  My Career
+                  Our Services
                 </h2>
               </AnimatedSubheading>
               <AnimatedParagraphScroll>

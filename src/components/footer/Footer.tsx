@@ -60,7 +60,7 @@ const Footer = (props: Props) => {
           </AnimatedSubheading>
         </div>
         <div className="  w-full h-full">
-          <footer className="bg-black text-white  flex flex-col justify-between h-full">
+          <footer className=" text-white  flex flex-col justify-between h-full">
             <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 ">
               <div className="flex flex-col items-start">
                 <div className="flex items-center mb-4">

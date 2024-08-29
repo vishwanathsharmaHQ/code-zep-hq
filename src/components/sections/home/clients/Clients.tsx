@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 import React from "react";
 import gsap from "gsap";
+import { homePageCopy } from "@/utils/temp-data/copy";
 
 type Props = {};
 
@@ -36,21 +37,11 @@ const Clients = (props: Props) => {
     <div className="w-full">
       <div className="clientsContainer">
         <AnimatedSubheading className="overflown-subheading cz-h2 font-normal font-fancy text-balance leading-tight text-center pb-24 lg:block hidden">
-          <div className="overflow-hidden text-center">
-            Brands and Affiliates
-          </div>
-          <div className="overflow-hidden text-center">
-            {` that I've worked with`}
-          </div>
+          {homePageCopy.clients?.heading}
         </AnimatedSubheading>
 
         <AnimatedSubheading className="overflown-subheading cz-h2 font-normal font-fancy text-balance leading-tight text-center pb-24 lg:hidden block">
-          <div className="overflow-hidden text-center">
-            Brands and Affiliates
-          </div>
-          <div className="overflow-hidden text-center">
-            {` that I've worked with`}
-          </div>
+          {homePageCopy.clients?.heading}
         </AnimatedSubheading>
       </div>
 
