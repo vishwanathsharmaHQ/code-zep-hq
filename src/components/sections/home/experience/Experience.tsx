@@ -1,5 +1,4 @@
 import AnimatedSubheading from "@/components/common/animated/Subheadings/Subheadings";
-import { WORK_EXPERIENCE } from "@/utils/data/work-experience/experience";
 import AboutExperiencesAccordion from "./AboutExperiencesAccordion";
 import AnimatedParagraphScroll from "@/components/common/animated/Paragraphs/ParagraphScroll";
 import { experienceCopy } from "@/utils/temp-data/copy"; // Import copy
@@ -25,7 +24,7 @@ const Experience = (props: Props) => {
               </AnimatedParagraphScroll>
             </div>
             <div className="py-10">
-              {WORK_EXPERIENCE.map((item, index) => {
+              {experienceCopy.tiers.map((item, index) => {
                 return (
                   <div key={index}>
                     <AboutExperiencesAccordion

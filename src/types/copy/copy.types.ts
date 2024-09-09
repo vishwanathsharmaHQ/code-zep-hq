@@ -53,3 +53,22 @@ export interface ExperienceCopy {
   heading: string;
   description: string;
 }
+
+export interface ExperienceCopy {
+  heading: string;
+  description: string;
+  tiers: {
+    company: string;
+    isCurrent: boolean;
+    fromTo: {
+      from: string;
+      to: string;
+    };
+    position: string;
+    mainDescription: string;
+    achievements?: {
+      type: string;
+      text: string;
+    }[];
+  }[];
+}

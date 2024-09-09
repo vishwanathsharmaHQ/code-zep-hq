@@ -71,11 +71,11 @@ export const homePageCopy: HomePageCopy = {
 
 
 
-export const experienceCopy: ExperienceCopy = {
-  heading: "Our Services",
-  description:
-    "Explore the milestones and achievements that have shaped our professional growth.",
-};
+// export const experienceCopy: ExperienceCopy = {
+//   heading: "Our Services",
+//   description:
+//     "Explore the milestones and achievements that have shaped our professional growth.",
+// };
 
 export const footerCopy: FooterCopy = {
   heading: "Stay Connected",
@@ -102,4 +102,86 @@ export const footerCopy: FooterCopy = {
   copyRight: {
     text: "© 2024 Company Name. All rights reserved.",
   },
+};
+
+export const experienceCopy: ExperienceCopy = {
+  heading: "Our Services",
+  description: "Explore the range of services we offer across different tiers, tailored to meet various client needs.",
+  tiers: [
+    {
+      company: "Tier 1: Basic Web Development",
+      isCurrent: true,
+      fromTo: {
+        from: "2024",
+        to: "Ongoing",
+      },
+      position: "Basic Web Services",
+      mainDescription:
+        "Our Tier 1 services focus on basic website development and maintenance, ideal for small businesses looking to establish an online presence.",
+      achievements: [
+        {
+          type: "Dev",
+          text: "Responsive design across all devices",
+        },
+        {
+          type: "SEO",
+          text: "Basic SEO optimization to ensure better visibility in search engines.",
+        },
+        {
+          type: "CMS",
+          text: "Content management integration (e.g., WordPress) for easy updates.",
+        },
+      ],
+    },
+    {
+      company: "Tier 2: Advanced Web Applications",
+      isCurrent: true,
+      fromTo: {
+        from: "2023",
+        to: "Ongoing",
+      },
+      position: "Advanced Web Solutions",
+      mainDescription:
+        "Our Tier 2 services offer full-stack web application development, ideal for businesses looking for dynamic functionalities and interactive user experiences.",
+      achievements: [
+        {
+          type: "Dev",
+          text: "E-commerce platforms with payment gateway integration.",
+        },
+        {
+          type: "API",
+          text: "Custom API development for seamless third-party integrations.",
+        },
+        {
+          type: "Performance",
+          text: "Optimized for performance with advanced SEO and caching strategies.",
+        },
+      ],
+    },
+    {
+      company: "Tier 3: Enterprise Solutions",
+      isCurrent: true,
+      fromTo: {
+        from: "2022",
+        to: "Ongoing",
+      },
+      position: "Enterprise-Level Solutions",
+      mainDescription:
+        "Our Tier 3 services provide custom enterprise-grade solutions, including cloud infrastructure and scalable architectures for large-scale deployments.",
+      achievements: [
+        {
+          type: "Cloud",
+          text: "Cloud infrastructure setup with AWS, Azure, or Google Cloud.",
+        },
+        {
+          type: "Security",
+          text: "Enterprise-level security and compliance for data-sensitive projects.",
+        },
+        {
+          type: "Scaling",
+          text: "Scalable architecture designed to handle high traffic and load.",
+        },
+      ],
+    },
+  ],
 };
