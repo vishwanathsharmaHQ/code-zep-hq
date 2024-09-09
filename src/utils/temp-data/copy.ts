@@ -1,4 +1,4 @@
-import { FooterCopy, HomePageCopy } from "@/types/copy/copy.types";
+import { FooterCopy, HomePageCopy, ExperienceCopy} from "@/types/copy/copy.types";
 
 export const homePageCopy: HomePageCopy = {
   heroSection: {
@@ -67,6 +67,14 @@ export const homePageCopy: HomePageCopy = {
       },
     },
   ],
+};
+
+
+
+export const experienceCopy: ExperienceCopy = {
+  heading: "Our Services",
+  description:
+    "Explore the milestones and achievements that have shaped our professional growth.",
 };
 
 export const footerCopy: FooterCopy = {

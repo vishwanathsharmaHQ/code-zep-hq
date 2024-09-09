@@ -48,3 +48,8 @@ export type SocialLink = {
   link: PageLink;
   icon: string;
 };
+
+export interface ExperienceCopy {
+  heading: string;
+  description: string;
+}

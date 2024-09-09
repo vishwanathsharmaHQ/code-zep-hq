@@ -2,6 +2,8 @@ import AnimatedSubheading from "@/components/common/animated/Subheadings/Subhead
 import { WORK_EXPERIENCE } from "@/utils/data/work-experience/experience";
 import AboutExperiencesAccordion from "./AboutExperiencesAccordion";
 import AnimatedParagraphScroll from "@/components/common/animated/Paragraphs/ParagraphScroll";
+import { experienceCopy } from "@/utils/temp-data/copy"; // Import copy
+
 type Props = {};
 
 const Experience = (props: Props) => {
@@ -13,13 +15,12 @@ const Experience = (props: Props) => {
             <div className="">
               <AnimatedSubheading>
                 <h2 className="common-pagesubheading text-left font-fancy overflow-hidden leading-normal">
-                  Our Services
+                  {experienceCopy.heading} {/* Use copy from the file */}
                 </h2>
               </AnimatedSubheading>
               <AnimatedParagraphScroll>
                 <p className="font-fancy common-subheading w-full lg:w-4/6 pt-10 leading-relaxed">
-                  Explore the milestones and achievements that have shaped my
-                  professional growth.
+                  {experienceCopy.description} {/* Use copy from the file */}
                 </p>
               </AnimatedParagraphScroll>
             </div>
