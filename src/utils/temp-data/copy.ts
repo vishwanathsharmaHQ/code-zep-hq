@@ -26,7 +26,7 @@ export const homePageCopy: HomePageCopy = {
   },
 
   clients: {
-    heading: "Brands and Affiliates that I've worked with",
+    heading: "Brands and Affiliates that We've worked with",
   },
 
   sections: [
@@ -70,12 +70,6 @@ export const homePageCopy: HomePageCopy = {
 };
 
 
-
-// export const experienceCopy: ExperienceCopy = {
-//   heading: "Our Services",
-//   description:
-//     "Explore the milestones and achievements that have shaped our professional growth.",
-// };
 
 export const footerCopy: FooterCopy = {
   heading: "Stay Connected",
@@ -185,3 +179,14 @@ export const experienceCopy: ExperienceCopy = {
     },
   ],
 };
+
+
+export const contactCopy = {
+  heading: "Get in touch",
+  subheading:
+    "This is the part where you get in touch and we make amazing things happen.",
+  emailText: "codezep@codezep.com", // Update this email address as needed
+  emailDescription: "to set up an introductory call",
+};
+
+

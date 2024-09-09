@@ -72,3 +72,10 @@ export interface ExperienceCopy {
     }[];
   }[];
 }
+
+export interface ContactCopy {
+  heading: string;
+  subheading: string;
+  emailText: string;
+  emailDescription: string;
+}
