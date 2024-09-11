@@ -11,8 +11,4 @@ export const PAGE_ROUTES = [
     title: "About",
     href: "/about",
   },
-  {
-    title: "Resume",
-    href: "/resume",
-  },
 ];
