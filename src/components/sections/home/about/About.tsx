@@ -9,7 +9,7 @@ type Props = {};
 const About = (props: Props) => {
   return (
     <div className=" w-full relative  page-padding">
-      <div className="flex py-24">
+      <div className="flex">
         <div className="flex flex-col w-full ">
           <AnimatedSubheading className="common-pagesubheading text-left font-fancy overflow-hidden ">
             {homePageCopy.aboutSection.heading}

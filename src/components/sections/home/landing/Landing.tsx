@@ -37,7 +37,7 @@ const Landing = () => {
   }, [pathname]);
 
   return (
-    <div className="landing-section text-center w-full min-h-[120svh] flex relative">
+    <div className="landing-section text-center w-full min-h-[130lvh] flex relative">
       <ExperimentOne />
       <div className="w-full flex  items-center flex-col relative h-full pt-[15svh]">
         <div id="landing-text" className="cz-h1 font-fancy pb-10">

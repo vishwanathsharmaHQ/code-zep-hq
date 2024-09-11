@@ -35,7 +35,7 @@ const About = (props: Props) => {
   return (
     <div className="page-padding w-full ">
       <AboutLanding />
-      <div className="lg:py-10 text-center">
+      <div className=" text-center">
         <AnimatedSubheading className="mx-auto text-center">
           <h2 className="common-pagesubheading overflow-hidden font-fancy leading-tight">
             {servicesHeading}
