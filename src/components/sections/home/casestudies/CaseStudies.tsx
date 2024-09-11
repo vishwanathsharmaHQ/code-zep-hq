@@ -11,7 +11,7 @@ const CaseStudies = async (props: Props) => {
   return (
     <div className="case-studies-section w-full  ">
       <div className="section-padding">
-        <AnimatedSubheading className="overflown-subheading cz-h2 font-normal font-fancy text-balance leading-tight text-center pb-24 lg:block hidden">
+        <AnimatedSubheading className="overflown-subheading cz-h2 font-normal font-fancy text-balance text-left leading-tight pb-16 lg:block hidden">
           {homePageCopy.projects?.heading}
         </AnimatedSubheading>
 

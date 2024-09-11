@@ -1,14 +1,13 @@
 import {
-  FooterCopy,
-  HomePageCopy,
   ExperienceCopy,
-  AboutPageCopy,
+  FooterCopy,
+  HomePageCopy
 } from "@/types/copy/copy.types";
 
 export const homePageCopy: HomePageCopy = {
   heroSection: {
     heading:
-      "Welcome to <br /> our Innovative <br /> and creative <br /> world  <br />",
+      "Transform <br />Your  Vision Into <br />  Digital Realities",
     cta: {
       ctaText: "Work with us",
       ctaLink: "/work",

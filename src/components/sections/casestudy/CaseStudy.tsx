@@ -1,4 +1,3 @@
-"use client";
 
 import { ProjectType } from "@/types/util.types";
 import CaseStudyHeader from "./sections/CaseStudyHeader";

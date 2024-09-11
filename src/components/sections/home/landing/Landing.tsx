@@ -37,10 +37,10 @@ const Landing = () => {
   }, [pathname]);
 
   return (
-    <div className="landing-section text-center w-full h-svh items-center flex relative">
+    <div className="landing-section text-center w-full min-h-[120svh] flex relative">
       <ExperimentOne />
-      <div className="w-full flex justify-between items-center flex-col relative h-full pt-[15svh]">
-        <div id="landing-text" className="cz-h1 font-fancy">
+      <div className="w-full flex  items-center flex-col relative h-full pt-[15svh]">
+        <div id="landing-text" className="cz-h1 font-fancy pb-10">
           <MainHeading>{homePageCopy.heroSection.heading}</MainHeading>
         </div>
         <div className=" flex justify-center items-center w-full pb-32">

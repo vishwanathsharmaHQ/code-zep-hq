@@ -25,14 +25,15 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-between page-padding">
+    <main className="flex flex-col items-center justify-between">
       <Landing />
       <About />
-      <CaseStudies />
-      <Experience />
-      <Clients />
-      <Contact />
-      <Footer />
+      <div className="w-full h-full  page-padding">
+        <Experience />
+        <Clients />
+        <Contact />
+        <Footer />
+      </div>
     </main>
   );
 }
