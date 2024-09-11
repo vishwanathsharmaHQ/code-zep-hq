@@ -114,3 +114,59 @@ export type TeamMember = {
   image: string; // URL for the team member's image
   bio: string;
 };
+
+
+// copytypes.ts
+
+export interface SEOData {
+  title: string;
+  description: string;
+  thumbnail: string;
+  openGraph: {
+    images: string[];
+  };
+  twitter: {
+    card: string;
+    title: string;
+    description: string;
+    images: string[];
+  };
+}
+
+export interface WorkPageCopy {
+  seo: SEOData;
+  mainHeading: {
+    desktop: string[];
+    mobile: string[];
+  };
+  archiveButton: {
+    text: string;
+    link: string;
+  };
+}
+
+
+// copytypes.ts
+
+export interface SEOData {
+  title: string;
+  description: string;
+  thumbnail: string;
+  openGraph: {
+    images: string[];
+  };
+  twitter: {
+    card: string;
+    title: string;
+    description: string;
+    images: string[];
+  };
+}
+
+export interface ArchivePageCopy {
+  seo: SEOData;
+  mainHeading: {
+    desktop: string[];
+    mobile: string[];
+  };
+}

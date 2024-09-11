@@ -271,3 +271,69 @@ export const aboutPageCopy = {
     },
   },
 };
+
+export const workPageCopy = {
+  seo: {
+    title: "Work",
+    description: "Explore our projects that transform ideas into groundbreaking digital realities.",
+    thumbnail: "thumbnail-url",
+    openGraph: {
+      images: ["thumbnail-url"],
+    },
+    twitter: {
+      card: "thumbnail-url",
+      title: "Work",
+      description: "Explore our projects that transform ideas into groundbreaking digital realities.",
+      images: ["thumbnail-url"],
+    },
+  },
+  mainHeading: {
+    desktop: [
+      "Fucking with ideas",
+      "into groundbreaking",
+      "digital realities"
+    ],
+    mobile: [
+      "Transforming",
+      "ideas into",
+      "groundbreaking",
+      "digital realities"
+    ]
+  },
+  archiveButton: {
+    text: "Archive",
+    link: "/work/archive"
+  }
+};
+
+
+
+export const archivePageCopy = {
+  seo: {
+    title: "Work Archive",
+    description: "Preserving moments of digital innovation for the curious.",
+    thumbnail: "archive-thumbnail-url",
+    openGraph: {
+      images: ["archive-thumbnail-url"],
+    },
+    twitter: {
+      card: "archive-thumbnail-url",
+      title: "Work Archive",
+      description: "Preserving moments of digital innovation for the curious.",
+      images: ["archive-thumbnail-url"],
+    },
+  },
+  mainHeading: {
+    desktop: [
+      "Landur",
+      "of digital innovation",
+      "for the curious"
+    ],
+    mobile: [
+      "Landur",
+      "moments of",
+      "digital innovation",
+      "for the curious"
+    ]
+  }
+};

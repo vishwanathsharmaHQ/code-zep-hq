@@ -1,7 +1,9 @@
+// Import copy and types
+import { archivePageCopy } from "@/utils/temp-data/copy";
+import { ArchivePageCopy } from "@/types/copy/copy.types";
 import { MainHeading } from "@/components/common/animated/MainHeadings/MainHeadings";
 import Footer from "@/components/footer/Footer";
 import Work from "@/components/sections/work/Work";
-import { GLOBAL_SEO_DATA } from "@/utils/data/seo/seo";
 import { getProjectsByStatus } from "@/utils/server/utility-functions";
 import { Suspense } from "react";
 
@@ -11,19 +13,17 @@ interface WorkPageProps {
   };
 }
 
-const { title, description, thumbnail } = GLOBAL_SEO_DATA.work;
-
 export const metadata = {
-  title: title,
-  description: description,
+  title: archivePageCopy.seo.title,
+  description: archivePageCopy.seo.description,
   openGraph: {
-    images: [thumbnail],
+    images: archivePageCopy.seo.openGraph.images,
   },
   twitter: {
-    card: thumbnail,
-    title: title,
-    description: description,
-    images: [thumbnail], // Must be an absolute URL
+    card: archivePageCopy.seo.twitter.card,
+    title: archivePageCopy.seo.twitter.title,
+    description: archivePageCopy.seo.twitter.description,
+    images: archivePageCopy.seo.twitter.images, // Must be an absolute URL
   },
 };
 
@@ -34,24 +34,21 @@ const Archive = async ({ searchParams }: WorkPageProps) => {
       <div className="pt-24 lg:pt-48">
         <div className="common-pageheading font-black font-fancy leading-tight lg:block hidden">
           <MainHeading>
-            <div className="overflow-hidden leading-tight">
-              Preserving moments
-            </div>
-            <div className="overflow-hidden leading-tight">
-              of digital innovation
-            </div>
-            <div className="overflow-hidden leading-tight">for the curious</div>
+            {archivePageCopy.mainHeading.desktop.map((line, index) => (
+              <div key={index} className="overflow-hidden leading-tight">
+                {line}
+              </div>
+            ))}
           </MainHeading>
         </div>
 
         <div className="common-pageheading font-black font-fancy leading-tight lg:hidden block">
           <MainHeading>
-            <div className="overflow-hidden leading-tight">Preserving</div>
-            <div className="overflow-hidden leading-tight">moments of</div>
-            <div className="overflow-hidden leading-tight">
-              digital innovation
-            </div>
-            <div className="overflow-hidden leading-tight">for the curious</div>
+            {archivePageCopy.mainHeading.mobile.map((line, index) => (
+              <div key={index} className="overflow-hidden leading-tight">
+                {line}
+              </div>
+            ))}
           </MainHeading>
         </div>
       </div>
