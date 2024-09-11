@@ -31,7 +31,7 @@ export const homePageCopy: HomePageCopy = {
   },
 
   clients: {
-    heading: "Brands and Affiliates that We've worked with",
+    heading: "Brands and Affiliates <br /> that We've worked with",
   },
 
   sections: [
