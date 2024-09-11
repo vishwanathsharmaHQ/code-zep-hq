@@ -1,7 +1,6 @@
 "use server";
 
 import { db } from "@/app/lib/db";
-import { AllProjectsProps, ProjectType } from "@/types/util.types";
 
 export const getUserByEmail = async (email: string) => {
   try {
@@ -58,7 +57,6 @@ export const getAllProjects = async () => {
       },
     });
 
-    console.log(projects);
     return projects;
   } catch (error) {
     return null;

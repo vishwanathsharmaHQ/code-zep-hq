@@ -45,24 +45,8 @@ const AboutExperiencesAccordion = (props: Props) => {
             <h3 className="common-bold-subheading flex-[0.6]  text-left ">
               {props.position}
             </h3>
-            <div className="text-xl lg:text-4xl py-4 lg:py-0 flex-[0.2] text-left">
+            <div className="text-xl lg:text-4xl py-4 lg:py-0 flex-[0.4] text-left">
               {props.company}
-            </div>
-
-            <div className="text-sm font-medium  flex-[0.2] lg:flex items-center justify-between gap-5 hidden ">
-              <div className="flex items-center gap-5  flex-[0.2]">
-                {props.isCurrent ? (
-                  <div className="flex items-center gap-1 px-3 py-1 rounded-full text-xs font-medium border-2 ">
-                    <BriefcaseIcon className="w-4 h-4" />
-                    current
-                  </div>
-                ) : (
-                  <></>
-                )}
-              </div>
-              <div>
-                {props.fromTo.from} - {props.fromTo.to}
-              </div>
             </div>
           </div>
         </AccordionTrigger>

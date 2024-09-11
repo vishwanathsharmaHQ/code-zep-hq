@@ -203,7 +203,6 @@ type Props = {
 // Utility function to split text by <br /> and wrap each part in a <div>
 const splitTextByBr = (text: string) => {
   return text.split("<br />").map((part, index) => {
-    console.log(part);
 
     return (
       <div key={index} className="overflow-hidden !block">

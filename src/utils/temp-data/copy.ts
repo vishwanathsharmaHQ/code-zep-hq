@@ -1,4 +1,8 @@
-import { FooterCopy, HomePageCopy, ExperienceCopy} from "@/types/copy/copy.types";
+import {
+  FooterCopy,
+  HomePageCopy,
+  ExperienceCopy,
+} from "@/types/copy/copy.types";
 
 export const homePageCopy: HomePageCopy = {
   heroSection: {
@@ -69,8 +73,6 @@ export const homePageCopy: HomePageCopy = {
   ],
 };
 
-
-
 export const footerCopy: FooterCopy = {
   heading: "Stay Connected",
   quickLinks: [
@@ -100,7 +102,8 @@ export const footerCopy: FooterCopy = {
 
 export const experienceCopy: ExperienceCopy = {
   heading: "Our Services",
-  description: "Explore the range of services we offer across different tiers, tailored to meet various client needs.",
+  description:
+    "Explore the range of services we offer across different tiers, tailored to meet various client needs.",
   tiers: [
     {
       company: "Tier 1: Basic Web Development",
@@ -180,13 +183,10 @@ export const experienceCopy: ExperienceCopy = {
   ],
 };
 
-
 export const contactCopy = {
   heading: "Get in touch",
   subheading:
     "This is the part where you get in touch and we make amazing things happen.",
-  emailText: "codezep@codezep.com", // Update this email address as needed
+  emailText: "connect@codezep.com", // Update this email address as needed
   emailDescription: "to set up an introductory call",
 };
-
-

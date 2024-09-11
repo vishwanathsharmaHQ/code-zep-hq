@@ -8,7 +8,6 @@ type Props = {};
 const CaseStudies = async (props: Props) => {
   const projects = await getAllProjects();
 
-  console.log(projects);
   return (
     <div className="case-studies-section w-full  ">
       <div className="section-padding">
