@@ -4,38 +4,7 @@ import { MainHeading } from "@/components/common/animated/MainHeadings/MainHeadi
 import CommonButton from "@/components/common/buttons/CommonButton";
 import { homePageCopy } from "@/utils/temp-data/copy";
 import ExperimentOne from "@/utils/temp-data/ExperimentOne";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { usePathname } from "next/navigation";
-import { useRef } from "react";
 const Landing = () => {
-  const landingDescriptionRef = useRef<HTMLParagraphElement>(null);
-  const circularLinkRef = useRef<HTMLDivElement>(null);
-  const pathname = usePathname();
-
-  useGSAP(() => {
-    const entryTL = gsap.timeline({});
-
-    entryTL
-
-      .fromTo(
-        ".circle-button-landing-moon",
-        { opacity: 0 },
-        { opacity: 1 },
-        "<"
-      )
-      .fromTo(
-        ".circle-button-landing-moon",
-        {
-          rotate: -90,
-        },
-        {
-          rotate: 0,
-        },
-        "<"
-      );
-  }, [pathname]);
-
   return (
     <div className="landing-section text-center w-full min-h-[130lvh] flex relative">
       <ExperimentOne />

@@ -1,13 +1,9 @@
 import AnimatedSubheading from "@/components/common/animated/Subheadings/Subheadings";
-import { getAllProjects } from "@/utils/server/utility-functions";
-import CaseStudyClientWrapper from "./components/CaseStudyClientWrapper";
+import { AllProjectsProps } from "@/types/util.types";
 import { homePageCopy } from "@/utils/temp-data/copy";
+import CaseStudyClientWrapper from "./components/CaseStudyClientWrapper";
 
-type Props = {};
-
-const CaseStudies = async (props: Props) => {
-  const projects = await getAllProjects();
-
+const CaseStudies = ({ projects }: AllProjectsProps) => {
   return (
     <div className="case-studies-section w-full  ">
       <div className="section-padding">

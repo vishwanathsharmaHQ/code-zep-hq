@@ -26,7 +26,7 @@ import Menu from "./menu/menu";
 const Nav = () => {
   // const [isNav, setIsNav] = useState(false);
 
-  const { isNav, setIsNav } = useMainContext();
+  const { isNav, setIsNav, setSplineLoaded } = useMainContext();
 
   // State to keep track of last scroll position
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -298,6 +298,16 @@ const Nav = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setSplineLoaded(true);
+    }
+
+    return () => {
+      setSplineLoaded(false);
+    };
+  }, [pathname]);
 
   return (
     <>

@@ -3,14 +3,14 @@
 import { useMainContext } from "@/context/MainContext";
 import { loadingSlideIn, slideOut } from "@/utils/animations/transitions";
 import { usePathname } from "next/navigation";
-import { useContext, useEffect } from "react";
+import { useEffect } from "react";
 
 type Props = {};
 
 const PageTransition = (props: Props) => {
   const pathname = usePathname();
   //   const { isAnimating, setIsAnimating } = useContext(MainContext);
-  const { isAnimating, setIsAnimating } = useMainContext();
+  const { isAnimating, setIsAnimating, splineLoaded } = useMainContext();
 
   const slideAnimationOptions = {
     isAnimating: isAnimating,
@@ -18,11 +18,7 @@ const PageTransition = (props: Props) => {
   };
 
   useEffect(() => {
-    // if (pathname === "/") {
-
-    // } else {
-    //     slideOut(slideAnimationOptions);
-    // }
+    if (!splineLoaded) return;
 
     switch (pathname) {
       case "/":
@@ -36,7 +32,7 @@ const PageTransition = (props: Props) => {
         slideOut(slideAnimationOptions);
         break;
     }
-  }, [pathname]);
+  }, [pathname, splineLoaded]);
 
   return (
     <div className="fixed top-0 z-50 pointer-events-none h-screen w-full">

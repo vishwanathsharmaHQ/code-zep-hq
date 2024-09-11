@@ -13,7 +13,7 @@ const Logo = (props: Props) => {
         src="/images/kdotdevwhite.png"
       />
       <h2 className="text-3xl lg:text-4xl nav-logo text-inherit">
-        Code-Zephyr
+        code-zephyr
         {/* k<span className="font-black text-[#9333ea]">dot</span>dev */}
       </h2>
     </div>

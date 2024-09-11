@@ -19,6 +19,8 @@ type Context = {
   setIsNav: Dispatch<SetStateAction<boolean>>;
   isNavAnimating: boolean;
   setIsNavAnimating: Dispatch<SetStateAction<boolean>>;
+  splineLoaded: boolean;
+  setSplineLoaded: Dispatch<SetStateAction<boolean>>;
 };
 
 // Just find-replace "XContext" with whatever context name you like. (ie. DankContext)
@@ -28,6 +30,7 @@ export const MainContextProvider = ({ children }: Props) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [isNav, setIsNav] = useState(false);
   const [isNavAnimating, setIsNavAnimating] = useState(false);
+  const [splineLoaded, setSplineLoaded] = useState(false);
 
   gsap.registerPlugin(ScrollTrigger);
   gsap.registerPlugin(ScrollToPlugin);
@@ -41,6 +44,8 @@ export const MainContextProvider = ({ children }: Props) => {
         setIsNav,
         isNavAnimating,
         setIsNavAnimating,
+        splineLoaded,
+        setSplineLoaded,
       }}
     >
       {children}
