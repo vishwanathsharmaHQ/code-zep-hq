@@ -3,6 +3,7 @@ import Footer from "@/components/footer/Footer";
 import AboutLanding from "@/components/sections/about/AboutLanding";
 import { AboutServicesAccordion } from "@/components/sections/home/about/AboutServicesAccordion";
 import { GLOBAL_SEO_DATA } from "@/utils/data/seo/seo";
+import { aboutPageCopy } from "@/utils/temp-data/copy";
 
 type Props = {};
 
@@ -23,23 +24,30 @@ export const metadata = {
 };
 
 const About = (props: Props) => {
+  const {
+    heading,
+    subheading,
+    servicesHeading,
+    servicesDescription,
+    accordion,
+  } = aboutPageCopy;
+
   return (
     <div className="page-padding w-full ">
       <AboutLanding />
       <div className="lg:py-10 text-center">
-        <AnimatedSubheading className=" mx-auto text-center">
+        <AnimatedSubheading className="mx-auto text-center">
           <h2 className="common-pagesubheading overflow-hidden font-fancy leading-tight">
-            What I can do
+            {servicesHeading}
           </h2>
         </AnimatedSubheading>
         <h3 className="common-subheading font-fancy py-5 pb-2 lg:py-10 lg:pb-10 text-balance">
-          {`Whether you have a clear vision or just a budding idea, I'm here to
-          collaborate with you to bring your concepts to life.`}
+          {servicesDescription}
         </h3>
       </div>
 
       <div>
-        <AboutServicesAccordion />
+        <AboutServicesAccordion accordionData={accordion} />
       </div>
 
       <Footer />

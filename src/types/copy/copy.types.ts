@@ -12,7 +12,7 @@ export type HomePageCopy = {
     heading: string;
   };
   clients?: {
-    heading: string; 
+    heading: string;
   };
   sections: GenericSection[];
 };
@@ -79,3 +79,38 @@ export interface ContactCopy {
   emailText: string;
   emailDescription: string;
 }
+
+// Type definition for the About page content
+export type AboutPageCopy = {
+  heroSection: {
+    heading: string;
+    description: string;
+    cta: CTA;
+  };
+  servicesSection: {
+    heading: string;
+    description: string[];
+    cta: CTA;
+  };
+  teamSection: {
+    heading: string;
+    description: string;
+    members: TeamMember[];
+  };
+  missionSection: {
+    heading: string;
+    description: string[];
+  };
+  visionSection: {
+    heading: string;
+    description: string[];
+  };
+};
+
+// Type definition for team member details
+export type TeamMember = {
+  name: string;
+  role: string;
+  image: string; // URL for the team member's image
+  bio: string;
+};

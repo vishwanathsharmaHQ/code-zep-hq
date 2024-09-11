@@ -2,6 +2,7 @@ import {
   FooterCopy,
   HomePageCopy,
   ExperienceCopy,
+  AboutPageCopy,
 } from "@/types/copy/copy.types";
 
 export const homePageCopy: HomePageCopy = {
@@ -189,4 +190,84 @@ export const contactCopy = {
     "This is the part where you get in touch and we make amazing things happen.",
   emailText: "connect@codezep.com", // Update this email address as needed
   emailDescription: "to set up an introductory call",
+};
+
+export const aboutPageCopy = {
+  heading: "About Us",
+  subheading: "Discover who we are, what we do, and how we can help you.",
+  servicesHeading: "What We Can Do",
+  servicesDescription:
+    "Whether you have a clear vision or just a budding idea, we're here to collaborate with you to bring your concepts to life.",
+  accordion: {
+    strategy: {
+      title: "Strategy",
+      description:
+        "Understand your needs, set a solid foundation, and transform your business.",
+      items: [
+        {
+          heading: "Discovery Sessions",
+          description:
+            "Dive deep into your business, goals, and challenges to uncover opportunities.",
+        },
+        {
+          heading: "Competitor Analysis",
+          description:
+            "Understand the competitive landscape and identify your unique positioning.",
+        },
+        {
+          heading: "User Journey Mapping",
+          description:
+            "Map out the user experience and identify pain points to create seamless interactions.",
+        },
+        {
+          heading: "Information Architecture",
+          description:
+            "Organize content and functionality to create a clear and intuitive structure.",
+        },
+        {
+          heading: "Vision Setting",
+          description:
+            "Collaborate to define a clear vision and roadmap for your project.",
+        },
+        {
+          heading: "Business Transformation",
+          description:
+            "Identify opportunities to improve your business processes and operations.",
+        },
+      ],
+    },
+    design: {
+      title: "Design",
+      description: "Crafting intuitive and engaging user experiences.",
+      items: [
+        {
+          heading: "Heuristic Evaluation",
+          description:
+            "Assess the usability and accessibility of your existing design.",
+        },
+        {
+          heading: "Idea Generation",
+          description:
+            "Brainstorm and explore innovative design concepts and solutions.",
+        },
+      ],
+    },
+    development: {
+      title: "Development",
+      description:
+        "Bringing your designs to life with robust and scalable code.",
+      items: [
+        {
+          heading: "Static Websites",
+          description:
+            "Fast, secure, and SEO-friendly static websites built with modern frameworks.",
+        },
+        {
+          heading: "CMS Integration",
+          description:
+            "Seamlessly integrate your designs with popular content management systems.",
+        },
+      ],
+    },
+  },
 };

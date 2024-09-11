@@ -6,10 +6,12 @@ import { useGSAP } from "@gsap/react";
 import { usePathname } from "next/navigation";
 import { useRef } from "react";
 import gsap from "gsap";
+import { aboutPageCopy } from "@/utils/temp-data/copy";
 
 type Props = {};
 
 const AboutLanding = (props: Props) => {
+  const { heading, subheading } = aboutPageCopy; // Use the dynamic data
   const landingDescriptionRef = useRef<HTMLParagraphElement>(null);
   const circularLinkRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
@@ -29,17 +31,12 @@ const AboutLanding = (props: Props) => {
         {
           y: "0%",
           opacity: 1,
-
           stagger: 0.2,
           delay: 0.25,
         }
       )
-
       .fromTo(
-        [
-          // circularLinkRef.current.children[0],
-          circularLinkRef.current.children[0].children[1].children,
-        ],
+        [circularLinkRef.current.children[0].children[1].children],
         {
           color: "#000",
           y: "100%",
@@ -47,7 +44,6 @@ const AboutLanding = (props: Props) => {
         {
           color: "#fff",
           y: "0%",
-
           stagger: 0.5,
         }
       )
@@ -80,27 +76,16 @@ const AboutLanding = (props: Props) => {
       hoverTL.reverse();
     });
   }, [pathname]);
+
   return (
     <div className="pt-24 lg:pt-48 w-full h-screen text-balance">
       <div className="common-pageheading font-black font-fancy leading-tight lg:block hidden">
         <MainHeading>
-          <div className="overflow-hidden leading-tight">Welcome to my</div>
-          <div className="overflow-hidden leading-tight">
-            digital playground.
-          </div>
-        </MainHeading>
-      </div>
-
-      <div className="common-pageheading font-black font-fancy leading-tight lg:hidden block">
-        <MainHeading>
-          <div className="overflow-hidden leading-tight">Welcome to</div>
-          <div className="overflow-hidden leading-tight">my digital</div>
-          <div className="overflow-hidden leading-tight">playground.</div>
+          <div className="overflow-hidden leading-tight">{heading}</div>
         </MainHeading>
       </div>
       <p ref={landingDescriptionRef} className="my-10 text-center mx-auto cz-p">
-        {` I'm Kartik, a multidisciplinary developer and designer with a passion
-        for crafting immersive digital experiences.`}
+        {subheading}
       </p>
 
       <div
@@ -109,8 +94,7 @@ const AboutLanding = (props: Props) => {
       >
         <div className="circle-button-landing h-full w-full flex justify-center items-center">
           <div className="circle-button-landing-moon"></div>
-
-          <div className=" relative w-full h-[3em] basic-color-transition">
+          <div className="relative w-full h-[3em] basic-color-transition">
             <PageTransitionLink
               href="/work"
               className="font-fancy absolute left-1/2 -translate-x-1/2 w-[200%] h-full text-xl lg:text-3xl flex items-center justify-center bg-black py-4"
