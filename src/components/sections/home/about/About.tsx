@@ -3,6 +3,7 @@ import AnimatedSubheading from "@/components/common/animated/Subheadings/Subhead
 import CommonButton from "@/components/common/buttons/CommonButton";
 import PageTransitionLink from "@/components/common/links/PageTransitionLink";
 import { homePageCopy } from "@/utils/temp-data/copy";
+import AboutServicesGrid from "./AboutServicesGrid";
 
 type Props = {};
 
@@ -28,8 +29,10 @@ const About = (props: Props) => {
             })}
           </AnimatedParagraphScroll>
 
+          <AboutServicesGrid />
+
           <div className="">
-            <PageTransitionLink href="/about" className="flex gap-5">
+            <PageTransitionLink href="/about" className="flex gap-5 pt-16">
               <CommonButton>Learn More</CommonButton>
             </PageTransitionLink>
           </div>
