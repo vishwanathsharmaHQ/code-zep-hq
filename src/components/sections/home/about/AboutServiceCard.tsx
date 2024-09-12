@@ -61,7 +61,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className="backdrop-filter backdrop-blur-lg p-6 rounded-2xl cursor-pointer relative overflow-hidden border border-gray-700/30  hover:scale-105"
+      className="service-card backdrop-filter backdrop-blur-lg p-6 rounded-2xl cursor-pointer relative overflow-hidden border border-gray-700/30  hover:scale-105"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

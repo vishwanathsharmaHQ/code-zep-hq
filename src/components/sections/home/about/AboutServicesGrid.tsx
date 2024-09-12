@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import {
   BarChart,
   Cloud,
@@ -12,7 +12,12 @@ import {
   Wrench,
 } from "lucide-react";
 import ServiceCard from "./AboutServiceCard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 type Props = {};
+
+gsap.registerPlugin(ScrollTrigger);
 
 const services = [
   {
@@ -144,8 +149,41 @@ const services = [
 ];
 
 const AboutServicesGrid = (props: Props) => {
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      // Ensure elements exist before animating
+      const serviceCards = gridRef.current?.querySelectorAll(".service-card");
+
+      if (serviceCards) {
+        gsap.fromTo(
+          serviceCards,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            stagger: 0.2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: gridRef.current,
+              start: "top 80%",
+              toggleActions: "play none none none",
+            },
+          }
+        );
+      }
+    }, gridRef);
+
+    return () => ctx.revert(); // Clean up on unmount
+  }, []);
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div
+      ref={gridRef}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+    >
       {services.map((service, index) => (
         <ServiceCard
           key={service.title}
